@@ -44,7 +44,7 @@ class DisciplinaControlador {
     inserirAlunoNaDisciplina(codigo, aluno) {
         const insercao = this.disciplinaServico.inserirAluno(codigo, aluno);
         if (insercao) {
-            alert('Aluno inserido na disciplia com sucesso!');
+            alert('Aluno inserido na disciplina com sucesso!');
         } else {
             alert('Disciplina inexistente!');
         }
