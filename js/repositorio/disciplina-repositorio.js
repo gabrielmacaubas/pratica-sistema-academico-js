@@ -6,13 +6,11 @@ class DisciplinaRepositorio {
     // insere disciplina na lista de disciplinas
     inserir(disciplina) {
         this._disciplinas.push(disciplina);
-        return disciplina;
     }
 
     // insere aluno na disciplina
     inserirAluno(index, aluno) {
         this._disciplinas[index].adicionarAluno(aluno);
-        return true;
     }
 
     // remove disciplina

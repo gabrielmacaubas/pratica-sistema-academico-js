@@ -47,8 +47,6 @@ class DisciplinaControlador {
             alert('Aluno inserido na disciplina com sucesso!');
         } else {
             alert('Disciplina inexistente!');
-        }
-        
-        
+        }     
     }
 }

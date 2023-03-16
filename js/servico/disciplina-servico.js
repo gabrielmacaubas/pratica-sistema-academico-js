@@ -7,7 +7,7 @@ class DisciplinaServico {
     inserir(codigo, nome) {
         if (this.buscarPorCodigo(codigo).length == 0) {
             const disciplina = new Disciplina(codigo, nome);
-            return this.repositorio.inserir(disciplina);
+            return true;
         }
 
         // já existe uma disciplina com esse código
@@ -17,8 +17,8 @@ class DisciplinaServico {
     // verifica se disciplina existe para inserir aluno no repositorio
     inserirAluno(codigo, aluno) {
         if (this.buscarPorCodigo(codigo).length == 1) {
-            const index = this.repositorio.buscarIndex(codigo);
-            return this.repositorio.inserirAluno(index, aluno);
+            this.repositorio.buscarIndex(codigo);
+            return true;
         }
         
         return undefined;
