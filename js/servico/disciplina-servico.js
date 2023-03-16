@@ -7,6 +7,7 @@ class DisciplinaServico {
     inserir(codigo, nome) {
         if (this.buscarPorCodigo(codigo).length == 0) {
             const disciplina = new Disciplina(codigo, nome);
+            this.repositorio.inserir(disciplina);
             return true;
         }
 
